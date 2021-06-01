@@ -5,13 +5,9 @@ import {
   Animated,
   Dimensions,
 } from "react-native";
-
-
 function FloatSheet({ children, open }) {
   const [animation, setAnimation] = useState(new Animated.Value(0));
-
   const screenHeight = Dimensions.get("window").height;
-
   const backdrop = {
     transform: [
       {
@@ -28,7 +24,6 @@ function FloatSheet({ children, open }) {
       extrapolate: "clamp",
     }),
   };
-
   open
     ? Animated.timing(animation, {
         toValue: 1,
@@ -40,7 +35,6 @@ function FloatSheet({ children, open }) {
         duration: 300,
         useNativeDriver: true,
       }).start();
-
   return (
     <Animated.View style={[StyleSheet.absoluteFill, styles.cover, backdrop]}>
       <Animated.View style={[styles.sheet]}>

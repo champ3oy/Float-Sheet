@@ -1,0 +1,8 @@
+{
+  "name": "react-native-float-sheet",
+  "version": "1.0.0",
+  "description": "use floating modal sheet in your application",
+  "main": "index.js",
+  "author": "cirlorm",
+  "license": "ISC"
+}
